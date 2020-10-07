@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/91e0a5b445.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>BAGISOAL</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <body class="bg-rosy">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
       <a class="navbar-brand ml-2" style="font-weight: bold;">BAGI<span class="text-warning">SOAL</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,21 +42,203 @@
             <a class="nav-link" href="#">BANTUAN</a>
           </li>
         </ul>
-        <form class="form-inline mx-auto">
-          <input class="form-control px-3 mr-2" type="search" placeholder="Cari" aria-label="Search">
-          <button class="btn btn-warning" type="submit"><i class="fas fa-search"></i></button>
+        <form class="form-inline mx-auto my-2">
+          <div class="input-group">
+            <input class="form-control mr-2 input" type="search" placeholder="Cari" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-warning d-inline-block" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
         </form>
-        <div class="mr-2">
+        <div class="mr-2 ml-0">
           <button class="btn btn-outline-warning mx-1">MASUK</button>
           <button class="btn btn-outline-warning mx-1">DAFTAR</button>
         </div>
       </div>
     </nav>
-    <div class="container-fluid">
-      <div class="container">
-        
+    <!-- <div class="container-fluid bg-warning"> -->
+      <div class="container text-center p-3 my-3 rounded bg-white shadow">
+        <div class="row p-1">
+          <div class="col-12 col-md-9">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <h3 class="mt-2 mb-4"><b>SOAL POPULER</b></h3>
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">KESULITAN</th>
+                        <th scope="col">BIDANG</th>
+                        <th scope="col">MATERI</th>
+                        <th scope="col">POIN</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>MUDAH</td>
+                        <td>Biologi</td>
+                        <td>Reproduksi</td>
+                        <td>5 poin</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>SEDANG</td>
+                        <td>Kimia</td>
+                        <td>Stoikiometri</td>
+                        <td>10 poin</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>SULIT</td>
+                        <td>Matematika</td>
+                        <td>Integral</td>
+                        <td>20 poin</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>MUDAH</td>
+                        <td>Kimia</td>
+                        <td>Termokimia</td>
+                        <td>4 poin</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>SULIT</td>
+                        <td>Matematika</td>
+                        <td>Aljabar</td>
+                        <td>22 poin</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <h3 class="mt-2 mb-4"><b>PERINGKAT</b></h3>                
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <h4>PROVINSI</h4>
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">PROVINSI</th>
+                        <th scope="col">POIN</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Jawa Timur</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Barat</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Tengah</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Timur</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Timur</td>
+                        <td>2234 poin</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-4">
+                  <h4>PROVINSI</h4>
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">KOTA</th>
+                        <th scope="col">POIN</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Jawa Timur</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Barat</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Tengah</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Timur</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Timur</td>
+                        <td>2234 poin</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col-4">
+                  <h4>PROVINSI</h4>
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">SEKOLAH</th>
+                        <th scope="col">POIN</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Jawa Timur</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Barat</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Tengah</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Timur</td>
+                        <td>2234 poin</td>
+                      </tr>
+                      <tr>
+                        <td>Jawa Timur</td>
+                        <td>2234 poin</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <h3 class="mt-2 mb-4"><b>MATERI BARU</b></h3>
+            <ul class="list-group">
+              <a href="#" class="list-group-item list-group-item-action">Materi Kalkulus</a>
+              <a href="#" class="list-group-item list-group-item-action">Materi Kalkulus</a>
+              <a href="#" class="list-group-item list-group-item-action">Materi Kalkulus</a>
+              <a href="#" class="list-group-item list-group-item-action">Materi Kalkulus</a>
+              <a href="#" class="list-group-item list-group-item-action">Materi Kalkulus</a>
+              <a href="#" class="list-group-item list-group-item-action">Materi Kalkulus</a>
+              <a href="#" class="list-group-item list-group-item-action">Materi Kalkulus</a>
+              <a href="#" class="list-group-item list-group-item-action">Materi Kalkulus</a>
+              <button class="btn btn-success rounded-0">Lebih..</button>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    <!-- </div> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
