@@ -1,3 +1,6 @@
 .bg-rosy{
 	background-color: #ffdd59;
 }
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
