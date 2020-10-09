@@ -7,3 +7,19 @@
 html {
   scroll-behavior: smooth;
 }
+
+.carousel img {
+    max-height: 300px;
+    margin: 0 auto;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+.navbar-brand {
+  padding: 0;
+}
+.navbar-nav .nav-link{
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50px;
+  line-height: 50px;
+}
