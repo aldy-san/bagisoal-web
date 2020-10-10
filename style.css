@@ -12,7 +12,7 @@ html {
     max-height: 300px;
     margin: 0 auto;
     object-fit: cover;
-    filter: brightness(80%);
+    filter: brightness(90%);
 }
 .navbar-brand {
   padding: 0;
