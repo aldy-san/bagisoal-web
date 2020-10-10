@@ -19,50 +19,41 @@
         <span class="navbar-toggler-icon"></span>
       </button>
        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">BERANDA<span class="sr-only">(current)</span></a>
+        <ul class="navbar-nav ml-auto mr-md-3">
+          <li class="nav-item d-inline">
+            <div class="text-white align-self-center text-right">
+              <p style=" line-height: 25px" class="p-0 m-0">Kaguya Shinomiya</p>
+              <p style=" line-height: 25px" class="p-0 m-0">ADMIN</p>
+            </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="soal-main.html">SOAL-SOAL</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="kompetisi-main.html">KOMPETISI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="komunitas.html">KOMUNITAS</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              PERINGKAT
+          <li class="nav-item dropdown d-inline  ">
+            <a class="nav-link ml-md-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="rounded-circle d-inline-block" src="res/ks.jpg" width="40" height="40">
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">PROVINSI</a>
-              <a class="dropdown-item" href="#">KOTA</a>
-              <a class="dropdown-item" href="#">SEKOLAH</a>
+            <div class="dropdown-menu" style="left: -100px;" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Dashboard</a>
+              <a class="dropdown-item" href="#">Log Out</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#help">BANTUAN</a>
-          </li>
+          </li>   
         </ul>
-        <form class="form-inline mx-auto my-2">
-          <div class="input-group">
-            <input class="form-control mr-2 input" type="search" placeholder="Cari" aria-label="Search">
-            <div class="input-group-append">
-              <button class="btn btn-warning d-inline-block" type="submit"><i class="fas fa-search"></i></button>
-            </div>
-          </div>
-        </form>
-        <div class="mr-2 ml-0">
-          <a class="btn btn-outline-warning mx-1" href="login.html">MASUK</a>
-          <a class="btn btn-outline-warning mx-1" href="login.html">DAFTAR</a>
-        </div>
       </div>
     </nav>
       <!-- CONTENT -->
-      <div class="container text-center p-3 my-3 rounded bg-white shadow">
-        <!-- ISI KONTEN DISINI YAAAAA!!!!! -->asdasdasdasdasd
+      <div class="container-fluid">
+      	<div class="row">
+      		<div class="col-2 min-vh-100 p-3 bg-dark border-top border-warning text-center">
+      			<h2 class="text-white mt-2 mb-4">DASHBOARD</h2>
+            <div class="list-group text-left">
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">
+                Beranda
+              </a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Tambah Soal Baru</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Riwayat Aktifitas</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Grafik Pengguna</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Pengaturan</a>
+            </div>
+      		</div>
+      	</div>
       </div>
 
       <!-- FOOTER -->
