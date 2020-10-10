@@ -10,111 +10,123 @@
     <link rel="icon" href="res/bs.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>BAGISOAL</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'Grafik Pengguna'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
   </head>
   <body>
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-      <a class="navbar-brand ml-2" style="font-weight: bold;">BAGI<span class="text-warning">SOAL</span></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBawah" aria-controls="navbarBawah" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-       <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <a class="navbar-brand ml-2" style="font-weight: bold;">BAGI<span class="text-warning">SOAL</span></a>
+      <div class="collapse navbar-collapse" id="navbarAtas">
         <ul class="navbar-nav ml-auto mr-md-3">
-          <li class="nav-item d-inline">
-            <div class="text-white align-self-center text-right">
-              <p style=" line-height: 25px" class="p-0 m-0">Kaguya Shinomiya</p>
-              <p style=" line-height: 25px" class="p-0 m-0">ADMIN</p>
+          <li class="nav-item align-self-center">
+            <div class="icon ml-auto mr-2 fa-lg">
+              <a href=""><i class="fas fa-envelope mr-3 text-white" data-toggle="tooltip" title="Surat Masuk"></i></a>
+              <a href=""><i class="fas fa-bell mr-3 text-white" data-toggle="tooltip" title="Notifikasi"></i></a>
+              <a href=""><i class="fas fa-sign-out-alt mr-3 text-white" data-toggle="tooltip" title="Keluar"></i></a>
             </div>
           </li>
-          <li class="nav-item dropdown d-inline  ">
-            <a class="nav-link ml-md-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img class="rounded-circle d-inline-block" src="res/ks.jpg" width="40" height="40">
-            </a>
-            <div class="dropdown-menu" style="left: -100px;" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Dashboard</a>
-              <a class="dropdown-item" href="#">Log Out</a>
-            </div>
-          </li>   
+          <li class="nav-item align-self-center mx-2">
+            <img class="rounded-circle d-inline-block" src="res/ks.jpg" width="40" height="40">
+          </li>
         </ul>
       </div>
     </nav>
       <!-- CONTENT -->
       <div class="container-fluid">
       	<div class="row">
-      		<div class="col-2 min-vh-100 p-3 bg-dark border-top border-warning text-center">
-      			<h2 class="text-white mt-2 mb-4">DASHBOARD</h2>
-            <div class="list-group text-left">
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light">
-                Beranda
-              </a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Tambah Soal Baru</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Riwayat Aktifitas</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Grafik Pengguna</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Pengaturan</a>
+          <div class="col-md-2 collapse navbar-collapse d-lg-block min-vh-100 bg-dark border-top border-warning text-center" id="navbarBawah">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+              <ul class="navbar-nav w-100 d-block mt-3 text-left ">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#"><i class="fas fa-tachometer-alt mr-2"></i>Dashboard</a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-user mr-2"></i>Daftar Pengguna</a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-handshake mr-2"></i>Daftar Mitra</a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-folder mr-2"></i>Daftar Soal</a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-folder-plus mr-2"></i>Tambah Soal</a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-chart-line mr-2"></i>Grafik Pengguna</a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a><hr class="bg-secondary">
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-10">
+            <div class="container p-5 my-3 rounded text-white shadow">
+              <div class="row d-flex justify-content-between">
+                <div class="col-10 col-md-3 bg-info">
+                  <div class="card-body">
+                    <i class="fas fa-folder d-inline mr-2"></i>
+                    <h5 class="card-title d-inline">Jumlah Pengguna</h5>
+                    <h6 class="display-4">2200</h6>
+                    <a href=""><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
+                  </div>
+                </div>
+                <div class="col-10 col-md-3 bg-success">
+                  <div class="card-body">
+                    <i class="fas fa-folder d-inline mr-2"></i>
+                    <h5 class="card-title d-inline">Jumlah Soal</h5>
+                    <h6 class="display-4">700</h6>
+                    <a href=""><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
+                  </div>
+                </div>
+                <div class="col-10 col-md-3 bg-danger">
+                  <div class="card-body">
+                    <i class="fas fa-folder d-inline mr-2"></i>
+                    <h5 class="card-title d-inline">Mitra</h5>
+                    <h6 class="display-4">7</h6>
+                    <a href=""><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div id="piechart" style="width: 600px; height: 600px;"></div>
+                </div>
+              </div>
             </div>
-      		</div>
+          </div>
       	</div>
       </div>
 
-      <!-- FOOTER -->
-      <div id="help" class="container-fluid p-md-3 mt-5 text-center rounded shadow-lg">
-        <div class="row mx-md-5 px-md-5 py-3">
-          <div class="col-12 col-md-4 w-25 mb-4">
-            <h5 class="mb-3">Tentang</h5>
-            <p class="text-justify">
-              Website ini berfungsi untuk memberikan layanan media informasi kepada  siswa-siswi Indonesia khususnya SMA yang kesulitan untuk mencari latihan soal.
-            </p>
-          </div>
-          <div class="col-12 col-md-4 w-25 mb-4">
-            <h5 class="mb-3">Sosial Media</h5>
-            <ul class="list-group list-group-horizontal w-auto mx-auto">
-              <li class="list-group-item border-0 mx-auto">
-                <a href="" class="text-dark">
-                  <i class="fab fa-facebook fa-2x my-2"></i>
-                </a>
-              </li>
-              <li class="list-group-item border-0 mx-auto">
-                <a href="" class="text-dark">
-                  <i class="fab fa-twitter fa-2x my-2 "></i>
-                </a>
-              </li>
-              <li class="list-group-item border-0 mx-auto">
-                <a href="" class="text-dark">
-                  <i class="fab fa-instagram fa-2x my-2"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-4 w-25 mb-4">
-            <h5 class="mb-3">Kontak</h5>
-            <ul class="list-group text-left">
-              <li class="list-group-item border-0">
-                <a href="" style="text-decoration: none;" class="text-dark">
-                  <i class="fas fa-envelope fa-lg d-inline mr-2"></i>
-                  <p class="h6 d-inline align-items-center">bagisoal@gmail.com</p>
-                </a>
-              </li>
-              <li class="list-group-item border-0">
-                <a href="" style="text-decoration: none;" class="text-dark">
-                  <i class="fas fa-phone fa-lg d-inline mr-2"></i>
-                  <p class="h6 d-inline align-items-center">0877-1234-1234 (Moshi)</p>
-                </a>
-              </li>
-              <li class="list-group-item border-0">
-                <a href="" style="text-decoration: none;" class="text-dark">
-                  <i class="fas fa-map-marker-alt fa-lg d-inline mr-2"></i>
-                  <p class="h6 d-inline align-items-center">Indonesia</p>
-                </a>
-              </li>
-            </ul>
-          </div> 
-        </div>
-        <div class="row">
-          <div class="col-12 mt-3">
-            Copyright © 2020 BAGISOAL
-          </div>
-        </div>
-      </div>
+      
     <!-- </div> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
