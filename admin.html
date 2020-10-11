@@ -13,25 +13,20 @@
   </head>
   <body>
     <!-- NAVIGATION -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow" id="nav">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBawah" aria-controls="navbarBawah" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand ml-2" style="font-weight: bold;">BAGI<span class="text-warning">SOAL</span></a>
-      <div class="collapse navbar-collapse" id="navbarAtas">
-        <ul class="navbar-nav ml-auto mr-md-3">
-          <li class="nav-item align-self-center">
-            <div class="icon ml-auto mr-2 fa-lg">
-              <a href=""><i class="fas fa-envelope mr-3 text-white" data-toggle="tooltip" title="Surat Masuk"></i></a>
-              <a href=""><i class="fas fa-bell mr-3 text-white" data-toggle="tooltip" title="Notifikasi"></i></a>
-              <a href=""><i class="fas fa-sign-out-alt mr-3 text-white" data-toggle="tooltip" title="Keluar"></i></a>
-            </div>
-          </li>
-          <li class="nav-item align-self-center mx-2">
-            <img class="rounded-circle d-inline-block" src="res/ks.jpg" width="40" height="40">
-          </li>
-        </ul>
-      </div>
+      <ul class="navbar-nav ml-auto mr-md-3">
+        <li class="nav-item align-self-center">
+          <div class="icon ml-auto mr-2 fa-lg">
+            <a href=""><i class="fas fa-envelope mr-3 text-white" data-toggle="tooltip" title="Surat Masuk"></i></a>
+            <a href=""><i class="fas fa-bell mr-3 text-white" data-toggle="tooltip" title="Notifikasi"></i></a>
+            <a href=""><i class="fas fa-sign-out-alt mr-3 text-white" data-toggle="tooltip" title="Keluar"></i></a>
+          </div>
+        </li>
+      </ul>
     </nav>
       <!-- CONTENT -->
       <div class="container-fluid">
@@ -40,55 +35,148 @@
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
               <ul class="navbar-nav w-100 d-block mt-3 text-left ">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#"><i class="fas fa-tachometer-alt mr-2"></i>Dashboard</a><hr class="bg-secondary">
+                  <a class="nav-link active" href="#nav"><i class="fas fa-tachometer-alt mr-2"></i>Dashboard</a><hr class="bg-secondary">
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#"><i class="fas fa-user mr-2"></i>Daftar Pengguna</a><hr class="bg-secondary">
+                  <a class="nav-link text-white" href="#grafik"><i class="fas fa-chart-line mr-2"></i>Grafik Pengguna</a><hr class="bg-secondary">
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#"><i class="fas fa-handshake mr-2"></i>Daftar Mitra</a><hr class="bg-secondary">
+                  <a class="nav-link text-white" href="#tambahSoal"><i class="fas fa-folder-plus mr-2"></i>Tambah Soal</a><hr class="bg-secondary">
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#"><i class="fas fa-folder mr-2"></i>Daftar Soal</a><hr class="bg-secondary">
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"><i class="fas fa-folder-plus mr-2"></i>Tambah Soal</a><hr class="bg-secondary">
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"><i class="fas fa-chart-line mr-2"></i>Grafik Pengguna</a><hr class="bg-secondary">
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a><hr class="bg-secondary">
+                  <a class="nav-link text-white" href="#riwayat"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a><hr class="bg-secondary">
                 </li>
               </ul>
             </nav>
           </div>
           <div class="col-md-10">
-            <div class="container p-5 my-3 rounded text-white shadow">
-              <div class="row my-3 d-flex justify-content-between">
-                <div class="col-12 my-2 col-md-3 bg-info">
+            <div class="container p-5 mt-3 rounded shadow">
+              <div class="row my-3 d-flex justify-content-between text-white">
+                <div class="col-12 my-2 col-lg-3 bg-info">
                   <div class="card-body">
-                    <i class="fas fa-folder d-inline mr-2"></i>
+                    <i class="fas fa-user d-inline mr-2"></i>
                     <h5 class="card-title d-inline">Jumlah Pengguna</h5>
                     <h6 class="display-4">2200</h6>
-                    <a href=""><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
+                    <a href="" style="text-decoration: none;"><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
                   </div>
                 </div>
-                <div class="col-12 my-2 col-md-3 bg-success">
+                <div class="col-12 my-2 col-lg-3 bg-success">
                   <div class="card-body">
                     <i class="fas fa-folder d-inline mr-2"></i>
                     <h5 class="card-title d-inline">Jumlah Soal</h5>
                     <h6 class="display-4">700</h6>
-                    <a href=""><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
+                    <a href="" style="text-decoration: none;"><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
                   </div>
                 </div>
-                <div class="col-12 my-2 col-md-3 bg-danger">
+                <div class="col-12 my-2 col-lg-3 bg-danger">
                   <div class="card-body">
-                    <i class="fas fa-folder d-inline mr-2"></i>
+                    <i class="fas fa-handshake d-inline mr-2"></i>
                     <h5 class="card-title d-inline">Mitra</h5>
                     <h6 class="display-4">7</h6>
-                    <a href=""><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
+                    <a href="" style="text-decoration: none;"><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="container p-5 mt-3 rounded shadow" id="grafik">
+              <div class="row">
+                <div class="col-12">
+                  <h2>Grafik Pengguna</h2>
+                </div>
+              </div>
+              <div class="row text-center mt-4">
+                <div class="col-12 col-md-6">
+                  <h4>Aktifitas Pengguna</h4>
+                  <div id="piechart"></div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <h4>Keaktifan Pengguna</h4>
+                  <div id="chart_div"></div>
+                </div>
+              </div>
+            </div>
+            <div class="container p-5 my-3 rounded shadow" id="tambahSoal">
+              <div class="row">
+                <div class="col-12">
+                  <h2>Tambah Soal</h2>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-12">
+                  <div class="container">
+                    <form>
+                      <div class="form-row my-2">
+                         <textarea class="form-control col-12 p-2" id="soal" placeholder="Masukkan Soal"></textarea>
+                      </div>
+                      <div class="form-row my-2">
+                       <div class="form-group col-md-12">
+                          <label for="gambarSoal">Tambahkan gambar (Soal)</label>
+                          <input type="file" class="form-control-file" id="gambarSoal">
+                        </div>
+                      </div>
+                      <div class="form-row my-2">
+                        <div class="form-group col-12 col-md-3">
+                          <label for="opsi1">Opsi 1</label>
+                          <textarea class="form-control" id="opsi1" rows="1"></textarea>
+                        </div>
+                        <div class="form-group col-12 col-md-3">
+                          <label for="opsi2">Opsi 2</label>
+                          <textarea class="form-control" id="opsi2" rows="1"></textarea>
+                        </div>
+                        <div class="form-group col-12 col-md-3">
+                          <label for="opsi3">Opsi 3</label>
+                          <textarea class="form-control" id="opsi3" rows="1"></textarea>
+                        </div>
+                        <div class="form-group col-12 col-md-3">
+                          <label for="opsi4">Opsi 4</label>
+                          <textarea class="form-control" id="opsi4" rows="1"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-row my-2">
+                        <input class="form-control col-12 col-md-6 mr-md-2" type="text" name="Sumber" placeholder="Sumber">
+                        <select id="inputState" class="form-control col-12 col-md-3 mx-md-2">
+                          <option selected disabled value="">Materi...</option>
+                          <option>Matematika</option>
+                          <option>Biologi</option>
+                          <option>Fisika</option>
+                          <option>Kimia</option>
+                          <option>Bahasa Inggris</option>
+                          <option>Bahasa Indonesia</option>
+                        </select>
+                      </div>
+                      <div class="form-row my-2">
+                         <textarea class="form-control col-12 p-2" id="pembahasan" placeholder="Masukkan Pembahasan"></textarea>
+                      </div>
+                      <div class="form-row my-2">
+                       <div class="form-group col-md-12">
+                          <label for="gambarPembahasan">Tambahkan gambar (Pembahasan)</label>
+                          <input type="file" class="form-control-file" id="gambarPembahasan">
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary mb-2">Tambah Soal</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container p-5 my-3 rounded shadow" id="riwayat">
+              <div class="row">
+                <div class="col-12">
+                  <h2>Riwayat aktifitas</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <table class="table table-sm table-responsive-sm hide-scroll">
+                    <thead class="table-dark ">
+                      <tr>
+                        <th class="" scope="col" >SOAL</th>
+                        <th class="" scope="col" >MATERI</th>
+                        <th class="" scope="col" >SUMBER</th>
+                        <th class="" scope="col" >POIN</th>
+                      </tr>
+                    </thead>
+                  </table>
                 </div>
               </div>
             </div>
@@ -98,6 +186,53 @@
     <!-- </div> -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['ga ngapa-ngapain',     11],
+          ['Melihat Soal',      2],
+          ['Menjawab Soal',  2],
+          ['MengikutI Kompetisi', 2],
+        ]);
+
+        var options = {
+          title: ''
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Mon', 20, 28, 38, 45],
+          ['Tue', 31, 38, 55, 66],
+          ['Wed', 50, 55, 77, 80],
+          ['Thu', 77, 77, 66, 50],
+          ['Fri', 68, 66, 22, 15]
+          // Treat first row as data as well.
+          ], true);
+
+      var options = {
+        legend:'none'
+      };
+
+      var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+      }
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
