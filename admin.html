@@ -12,6 +12,7 @@
     <title>BAGISOAL</title>
   </head>
   <body>
+    <a href="#nav" class="btn btn-warning position-fixed d-none d-sm-block" style="z-index: 100; left: 40px; bottom: 40px;"><i class="fas fa-arrow-up"></i></a>
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow" id="nav">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBawah" aria-controls="navbarBawah" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,6 +47,12 @@
                 <li class="nav-item">
                   <a class="nav-link text-white" href="#riwayat"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a><hr class="bg-secondary">
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#riwayat"><i class="fas fa-user mr-2"></i>Profil</a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#riwayat"><i class="fas fa-cogs mr-2"></i>Pengaturan</a><hr class="bg-secondary">
+                </li>
               </ul>
             </nav>
           </div>
@@ -54,7 +61,7 @@
               <div class="row my-3 d-flex justify-content-between text-white">
                 <div class="col-12 my-2 col-lg-3 bg-info">
                   <div class="card-body">
-                    <i class="fas fa-user d-inline mr-2"></i>
+                    <i class="fas fa-users d-inline mr-2"></i>
                     <h5 class="card-title d-inline">Jumlah Pengguna</h5>
                     <h6 class="display-4">2200</h6>
                     <a href="" style="text-decoration: none;"><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
@@ -71,8 +78,16 @@
                 <div class="col-12 my-2 col-lg-3 bg-danger">
                   <div class="card-body">
                     <i class="fas fa-handshake d-inline mr-2"></i>
-                    <h5 class="card-title d-inline">Mitra</h5>
+                    <h5 class="card-title d-inline">Jumlah Mitra</h5>
                     <h6 class="display-4">7</h6>
+                    <a href="" style="text-decoration: none;"><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
+                  </div>
+                </div>
+                <div class="col-12 my-2 col-lg-3 bg-secondary">
+                  <div class="card-body">
+                    <i class="fas fa-users-cog d-inline mr-2"></i>
+                    <h5 class="card-title d-inline">Jumlah Admin</h5>
+                    <h6 class="display-4">3</h6>
                     <a href="" style="text-decoration: none;"><p class="card-text text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></p></a>
                   </div>
                 </div>
@@ -143,6 +158,7 @@
                           <option>Bahasa Inggris</option>
                           <option>Bahasa Indonesia</option>
                         </select>
+                        <input class="form-control col-12 col-md-2 mr-md-2 mx-md-2" type="number" name="Sumber" placeholder="Poin">
                       </div>
                       <div class="form-row my-2">
                          <textarea class="form-control col-12 p-2" id="pembahasan" placeholder="Masukkan Pembahasan"></textarea>
@@ -167,16 +183,62 @@
               </div>
               <div class="row">
                 <div class="col-12">
-                  <table class="table table-sm table-responsive-sm hide-scroll">
-                    <thead class="table-dark ">
+                  <table class="table table-sm table-responsive-sm hide-scroll  text-center">
+                    <thead class="table-dark">
                       <tr>
-                        <th class="" scope="col" >SOAL</th>
-                        <th class="" scope="col" >MATERI</th>
-                        <th class="" scope="col" >SUMBER</th>
-                        <th class="" scope="col" >POIN</th>
+                        <th class="" scope="col">#</th>
+                        <th class="" scope="col">SOAL</th>
+                        <th class="" scope="col">MATERI</th>
+                        <th class="" scope="col">SUMBER</th>
+                        <th class="" scope="col">POIN</th>
                       </tr>
                     </thead>
+                    <tbody>
+                      <tr>
+                          <th scope="row">2200</th>
+                          <td>Tentukanlah hasil dari Integral...</td>
+                          <td>Matematika</td>
+                          <td>Ujian Mandiri ITB 2016</td>
+                          <td>20 poin</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">2199</th>
+                          <td>Tentukanlah hasil dari Integral...</td>
+                          <td>Matematika</td>
+                          <td>Ujian Mandiri ITB 2016</td>
+                          <td>20 poin</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">2198</th>
+                          <td>Tentukanlah hasil dari Integral...</td>
+                          <td>Matematika</td>
+                          <td>Ujian Mandiri ITB 2016</td>
+                          <td>20 poin</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">2197</th>
+                          <td>Tentukanlah hasil dari Integral...</td>
+                          <td>Matematika</td>
+                          <td>Ujian Mandiri ITB 2016</td>
+                          <td>20 poin</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">2196</th>
+                          <td>Tentukanlah hasil dari Integral...</td>
+                          <td>Matematika</td>
+                          <td>Ujian Mandiri ITB 2016</td>
+                          <td>20 poin</td>
+                      </tr>
+                      <tr>
+                          <td colspan="5">...</td>
+                      </tr>
+                    </tbody>
                   </table>
+                </div>
+              </div>
+              <div class="row justify-content-end">
+                <div class="col-12">
+                  <a href="" class="btn btn-primary ">Lihat lebih..</a>
                 </div>
               </div>
             </div>
