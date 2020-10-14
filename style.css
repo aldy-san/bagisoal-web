@@ -14,3 +14,7 @@ html {
     object-fit: cover;
     filter: brightness(85%);
 }
+.sidebar-outer {
+    margin-top: 0px;
+    position: relative;
+}
