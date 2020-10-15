@@ -95,8 +95,8 @@
                   <a class="nav-link" href="#" id="tambah" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-folder-plus mr-2"></i>Tambah Data</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="tambah-soal.html">Tambah Soal</a>
-                    <a class="dropdown-item" href="#">Tambah Kompetisi</a>
-                    <a class="dropdown-item" href="#">Tambah Mitra</a>
+                    <a class="dropdown-item" href="tambah-kompetisi.html">Tambah Kompetisi</a>
+                    <a class="dropdown-item" href="tambah-mitra.html">Tambah Mitra</a>
                   </div>
                 </li>
                 <li class="nav-item py-3 px-1">
@@ -124,17 +124,22 @@
                 </div>
               </div>
               <div class="row">
-                <form class="col-12">
+                <form class="col-12 mt-3">
                   <div class="form-row my-2">
                     <div class="form-group col-12"> 
-                        <label for="soal"><b>Soal:</b></label>
+                        <label for="soal"><b>Soal</b></label>
                           <textarea class="form-control col-12 p-2" id="soal" placeholder="Masukkan Soal">Peleburan antara sel telur dan sel sperma akan membentuk</textarea>
                     </div>  
                   </div>
                   <div class="form-row my-2">
-                    <div class="form-group col-md-12">
+                    <div class="form-group col-md-4 col-12">
                       <label for="gambarSoal"><b>Tambahkan gambar (Soal)</b></label>
-                      <input type="file" class="form-control-file" id="gambarSoal">
+                      <div class="input-group mb-3">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                          <label class="custom-file-label" for="inputGroupFile01">Pilih File</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="form-row my-2">
@@ -185,9 +190,14 @@
                      </div>
                   </div>
                   <div class="form-row my-2">
-                   <div class="form-group col-md-12">
+                   <div class="form-group col-md-4 col-12">
                       <label for="gambarPembahasan"><b>Tambahkan gambar (Pembahasan)</b></label>
-                      <input type="file" class="form-control-file" id="gambarPembahasan">
+                      <div class="input-group mb-3">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                          <label class="custom-file-label" for="inputGroupFile01">Pilih File</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <button type="submit" class="btn btn-primary mb-2">Edit Soal</button>
@@ -202,7 +212,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
   </body>
 </html>

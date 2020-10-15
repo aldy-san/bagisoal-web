@@ -95,8 +95,8 @@
                   <a class="nav-link" href="#" id="tambah" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-folder-plus mr-2"></i>Tambah Data</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="tambah-soal.html">Tambah Soal</a>
-                    <a class="dropdown-item" href="tambah-kompetisi.html">Tambah Kompetisi</a>
-                    <a class="dropdown-item" href="tambah-mitra.html">Tambah Mitra</a>
+                    <a class="dropdown-item" href="#">Tambah Kompetisi</a>
+                    <a class="dropdown-item" href="#">Tambah Mitra</a>
                   </div>
                 </li>
                 <li class="nav-item py-3 px-1">
@@ -111,13 +111,48 @@
                 <nav aria-label="breadcrumb" class="w-100">
                   <ol class="breadcrumb m-0 w-100">
                     <li class="breadcrumb-item" aria-current="page"><a href="admin.html">Beranda</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Daftar Mitra</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="daftarkompetisi.html">Daftar Mitra</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tambah Mitra</li>
                   </ol>
                 </nav>
               </div>
             </div>
             <div class="container my-3 shadow p-md-5">
-              <!-- KONTENTT  -->
+              <div class="row">
+                <div class="col-12">
+                  <h2><i class="fas fa-plus mr-2"></i></i>TAMBAH MITRA</h2>
+                </div>
+              </div>
+              <div class="row">
+                <form class="col-12 mt-3">
+                  <div class="form-row my-2">
+                    <div class="form-group col-12"> 
+                        <label for="soal"><b>Nama Mitra</b></label>
+                        <input type="name" class="form-control my-2" id="namaMitra" placeholder="Nama Mitra">
+                    </div>  
+                  </div>
+                  <div class="form-row my-2">
+                    <div class="form-group col-12"> 
+                        <label for="soal"><b>Bidang</b></label>
+                        <input type="text" class="form-control my-2" id="bidang" placeholder="Bidang">
+                    </div>  
+                  </div>
+                  <div class="form-row my-2">
+                    <div class="form-group col-12"> 
+                        <label for="soal"><b>Alamat</b></label>
+                        <input type="text" class="form-control my-2" id="alamat" placeholder="Alamat">
+                    </div>  
+                  </div>
+                  <div class="form-row my-2">
+                    <div class="form-group col-12"> 
+                        <label for="soal"><b>Email</b></label>
+                        <input type="email" class="form-control my-2" id="emailMitra" placeholder="Email Mitra">
+                    </div>  
+                  </div>
+                  <button class="btn btn-primary my-2">Tambah Mitra</button>
+                  <button type="submit" class="btn btn-danger">Batal</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -126,7 +161,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
   </body>
 </html>
