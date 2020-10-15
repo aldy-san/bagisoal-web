@@ -19,19 +19,58 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand ml-2" href="index.html" style="font-weight: bold;">BAGI<span class="text-warning">SOAL</span></a>
-      <ul class="navbar-nav ml-auto mr-md-3">
-        <li class="nav-item align-self-center">
-          <div class="icon ml-auto mr-2 fa-lg">
-            <a href=""><i class="fas fa-envelope mr-3 text-white" data-toggle="tooltip" title="Surat Masuk"></i></a>
-            <a href=""><i class="fas fa-bell mr-3 text-white" data-toggle="tooltip" title="Notifikasi"></i></a>
+      <ul class="list-inline ml-auto mr-md-3 align-middle mb-0">
+        <li class="dropdown align-self-center list-inline-item">
+          <a style="text-decoration: none;" class="text-white align-middle" href="#" role="button" id="pesan" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-lg mx-2 fas fa-envelope mr-3 text-white" data-toggle="tooltip" title="S"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pesan" style="left: -110px">
+            <a class="dropdown-item" href="#">
+              <span class="d-block"><b>Admin satu</b></span>
+              <span class="d-block5">Gimana masalahnya udah beres?</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span class="d-block"><b>Admin dua</b></span>
+              <span class="d-block">Ada mitra baru nih...</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
           </div>
         </li>
-        <li class="dropdown">
-          <a style="text-decoration: none;" class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="dropdown align-self-center list-inline-item">
+          <a style="text-decoration: none;" class="text-white align-middle" href="#" role="button" id="notif" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-lg mx-2 fas fa-bell mr-3 text-white" data-toggle="tooltip" title=""></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="notif" style="left: -110px">
+            <a class="dropdown-item" href="#">
+              <span><b>Laporan</b></span>
+              <span class="d-block">Soal tidak ada jawaban</span>
+              <span class="fa-xs d-block text-primary">Dari: lailail</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span><b>Laporan</b></span>
+              <span class="d-block">Soal tidak ada jawaban</span>
+              <span class="fa-xs d-block text-primary">Dari: lailail</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span><b>Laporan</b></span>
+              <span class="d-block">Soal tidak ada jawaban</span>
+              <span class="fa-xs d-block text-primary">Dari: lailail</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item text-secondary" href="#">
+              Lihat Lebih...
+            </a>
+          </div>
+        </li>
+        <li class="dropdown list-inline-item">
+          <a style="text-decoration: none;" class="text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="res/ks.jpg" width="35" height="35" class="rounded-circle">
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="left: -100px">
-            <a class="dropdown-item" href="#">Profil Saya</a>
+            <a class="dropdown-item" href="profil-admin.html">Profil Saya</a>
             <a class="dropdown-item" href="#">Log out</a>
           </div>
         </li>
@@ -42,24 +81,26 @@
         <div class="row">
           <div class="col-md-2 collapse navbar-collapse d-lg-block min-vh-100 bg-dark border-top border-warning text-center" id="navbarBawah">
             <nav class="navbar navbar-expand-lg navbar-dark p-0 ">
-              <ul class="navbar-nav w-100 d-block mt-3 text-left ">
-                <li class="nav-item active py-3 px-1">
-                  <a class="nav-link " href="admin.html#nav"><i class="fas fa-home mr-2"></i>Beranda</a>
+              <ul class="navbar-nav w-100 d-block mt-3 text-left">
+                <li class="nav-item py-3 px-1">
+                  <a class="nav-link" href="#nav"><i class="fas fa-home mr-2"></i>Beranda</a>
                 </li>
                 <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="admin.html#grafik"><i class="fas fa-chart-line mr-2"></i>Grafik Pengguna</a>
+                  <a class="nav-link" href="#grafik"><i class="fas fa-chart-line mr-2"></i>Grafik Pengguna</a>
                 </li>
                 <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="admin.html#tambahSoal"><i class="fas fa-folder-plus mr-2"></i>Tambah Data</a>
+                  <a class="nav-link" href="#riwayat"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a>
+                </li>
+                <li class="nav-item py-3 px-1 dropdown">
+                  <a class="nav-link" href="#" id="tambah" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-folder-plus mr-2"></i>Tambah Data</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="tambah-soal.html">Tambah Soal</a>
+                    <a class="dropdown-item" href="#">Tambah Kompetisi</a>
+                    <a class="dropdown-item" href="#">Tambah Mitra</a>
+                  </div>
                 </li>
                 <li class="nav-item py-3 px-1">
-                  <a class="nav-link" href="admin.html#riwayat"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a>
-                </li>
-                <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="profil-admin.html"><i class="fas fa-user mr-2"></i>Profil</a>
-                </li>
-                <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="#"><i class="fas fa-cogs mr-2"></i>Pengaturan</a>
+                  <a class="nav-link" href="profil-admin.html"><i class="fas fa-user mr-2"></i>Profil</a>
                 </li>
               </ul>
             </nav>
@@ -78,16 +119,16 @@
             <div class="container my-3 shadow p-md-5">
               <h3><i class="fas fa-handshake mr-2"></i>DAFTAR MITRA</h3><hr>
               <a href="admin.html#tambahSoal" class="btn btn-primary mb-3"><i class="fas fa-plus-square mr-2"></i>Tambah Data</a>
-              <table class="table table-responsive-sm text-center table-striped">
+              <table class="table table-sm table-responsive-sm text-center table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama Perusahaan</th>
-                    <th scope="col">Bidang</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Tanggal Bergabung</th>
-                    <th colspan="3" scope="col">Aksi</th>
+                    <th scope="col" class="align-middle">No</th>
+                    <th scope="col" class="align-middle">Nama Perusahaan</th>
+                    <th scope="col" class="align-middle">Bidang</th>
+                    <th scope="col" class="align-middle">Alamat</th>
+                    <th scope="col" class="align-middle">Email</th>
+                    <th scope="col" class="align-middle">Tanggal Bergabung</th>
+                    <th colspan="3" scope="col" class="align-middle">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>

@@ -19,19 +19,58 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand ml-2" href="index.html" style="font-weight: bold;">BAGI<span class="text-warning">SOAL</span></a>
-      <ul class="navbar-nav ml-auto mr-md-3">
-        <li class="nav-item align-self-center">
-          <div class="icon ml-auto mr-2 fa-lg">
-            <a href=""><i class="fas fa-envelope mr-3 text-white" data-toggle="tooltip" title="Surat Masuk"></i></a>
-            <a href=""><i class="fas fa-bell mr-3 text-white" data-toggle="tooltip" title="Notifikasi"></i></a>
+      <ul class="list-inline ml-auto mr-md-3 align-middle mb-0">
+        <li class="dropdown align-self-center list-inline-item">
+          <a style="text-decoration: none;" class="text-white align-middle" href="#" role="button" id="pesan" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-lg mx-2 fas fa-envelope mr-3 text-white" data-toggle="tooltip" title="S"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pesan" style="left: -110px">
+            <a class="dropdown-item" href="#">
+              <span class="d-block"><b>Admin satu</b></span>
+              <span class="d-block5">Gimana masalahnya udah beres?</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span class="d-block"><b>Admin dua</b></span>
+              <span class="d-block">Ada mitra baru nih...</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
           </div>
         </li>
-        <li class="dropdown">
-          <a style="text-decoration: none;" class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="dropdown align-self-center list-inline-item">
+          <a style="text-decoration: none;" class="text-white align-middle" href="#" role="button" id="notif" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-lg mx-2 fas fa-bell mr-3 text-white" data-toggle="tooltip" title=""></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="notif" style="left: -110px">
+            <a class="dropdown-item" href="#">
+              <span><b>Laporan</b></span>
+              <span class="d-block">Soal tidak ada jawaban</span>
+              <span class="fa-xs d-block text-primary">Dari: lailail</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span><b>Laporan</b></span>
+              <span class="d-block">Soal tidak ada jawaban</span>
+              <span class="fa-xs d-block text-primary">Dari: lailail</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span><b>Laporan</b></span>
+              <span class="d-block">Soal tidak ada jawaban</span>
+              <span class="fa-xs d-block text-primary">Dari: lailail</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item text-secondary" href="#">
+              Lihat Lebih...
+            </a>
+          </div>
+        </li>
+        <li class="dropdown list-inline-item">
+          <a style="text-decoration: none;" class="text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="res/ks.jpg" width="35" height="35" class="rounded-circle">
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="left: -100px">
-            <a class="dropdown-item" href="#">Profil Saya</a>
+            <a class="dropdown-item" href="profil-admin.html">Profil Saya</a>
             <a class="dropdown-item" href="#">Log out</a>
           </div>
         </li>
@@ -42,24 +81,26 @@
         <div class="row">
           <div class="col-md-2 collapse navbar-collapse d-lg-block min-vh-100 bg-dark border-top border-warning text-center" id="navbarBawah">
             <nav class="navbar navbar-expand-lg navbar-dark p-0 ">
-              <ul class="navbar-nav w-100 d-block mt-3 text-left ">
-                <li class="nav-item active py-3 px-1">
-                  <a class="nav-link " href="admin.html#nav"><i class="fas fa-home mr-2"></i>Beranda</a>
+              <ul class="navbar-nav w-100 d-block mt-3 text-left">
+                <li class="nav-item py-3 px-1">
+                  <a class="nav-link" href="#nav"><i class="fas fa-home mr-2"></i>Beranda</a>
                 </li>
                 <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="admin.html#grafik"><i class="fas fa-chart-line mr-2"></i>Grafik Pengguna</a>
+                  <a class="nav-link" href="#grafik"><i class="fas fa-chart-line mr-2"></i>Grafik Pengguna</a>
                 </li>
                 <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="admin.html#tambahSoal"><i class="fas fa-folder-plus mr-2"></i>Tambah Data</a>
+                  <a class="nav-link" href="#riwayat"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a>
+                </li>
+                <li class="nav-item py-3 px-1 dropdown">
+                  <a class="nav-link" href="#" id="tambah" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-folder-plus mr-2"></i>Tambah Data</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="tambah-soal.html">Tambah Soal</a>
+                    <a class="dropdown-item" href="#">Tambah Kompetisi</a>
+                    <a class="dropdown-item" href="#">Tambah Mitra</a>
+                  </div>
                 </li>
                 <li class="nav-item py-3 px-1">
-                  <a class="nav-link" href="admin.html#riwayat"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a>
-                </li>
-                <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="profil-admin.html"><i class="fas fa-user mr-2"></i>Profil</a>
-                </li>
-                <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="#"><i class="fas fa-cogs mr-2"></i>Pengaturan</a>
+                  <a class="nav-link" href="profil-admin.html"><i class="fas fa-user mr-2"></i>Profil</a>
                 </li>
               </ul>
             </nav>
@@ -77,83 +118,112 @@
             </div>
             <div class="container my-3 shadow p-md-5">
               <h3><i class="fas fa-folder mr-2"></i>DAFTAR SOAL</h3><hr>
-              <a href="admin.html#tambahSoal" class="btn btn-primary mb-3"><i class="fas fa-plus-square mr-2"></i>Tambah Data</a>
-              <table class="table table-responsive-sm text-center table-striped">
+              <a href="tambah-soal.html" class="btn btn-primary mb-3"><i class="fas fa-plus-square mr-2"></i>Tambah Data</a>
+              <table class="table table-sm table-responsive-sm text-center table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">KODE SOAL</th>
-                    <th scope="col">SOAL</th>
-                    <th scope="col">SUMBER</th>
-                    <th scope="col" colspan="3">AKSI</th>
+                    <th scope="col" class="align-middle">KODE SOAL</th>
+                    <th scope="col" class="align-middle">SOAL</th>
+                    <th scope="col" class="align-middle">SUMBER</th>
+                    <th scope="col" class="align-middle">TANGGAL DITAMBAHKAN</th>
+                    <th scope="col" colspan="3" class="align-middle">AKSI</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row"><a href="#">BIO220</a></th>
+                    <th scope="row">BIO220</th>
                     <td class="text-left">Peleburan antara sel telur dan....</td>
                     <td>SIMAK UI 2018</td>
+                    <td>10 November 2020</td>
                     <td><a href="" class="btn btn-info">Detail</a></td>
-                    <td><a href="" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
-                    <td><a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="edit-soal.html" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
+                    <td><button type="button" data-toggle="modal" data-target="#hapus" href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
                   </tr>
                   <tr>
-                    <th scope="row"><a href="#">KIM119</a></th>
+                    <th scope="row">KIM119</th>
                     <td class="text-left">Tentukan rumus empiris...</td>
                     <td>STAN 2017</td>
+                    <td>10 November 2020</td>
                     <td><a href="" class="btn btn-info">Detail</a></td>
-                    <td><a href="" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
-                    <td><a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="edit-soal.html" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
+                    <td><button type="button" data-toggle="modal" data-target="#hapus" href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
                   </tr>
                   <tr>
-                    <th scope="row"><a href="#">MAT118</a></th>
+                    <th scope="row">MAT118</th>
                     <td class="text-left">Tentukanlah hasil dari Integral...</td>
                     <td>Ujian Mandiri ITB 2016</td>
+                    <td>10 November 2020</td>
                     <td><a href="" class="btn btn-info">Detail</a></td>
-                    <td><a href="" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
-                    <td><a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="edit-soal.html" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
+                    <td><button type="button" data-toggle="modal" data-target="#hapus" href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
                   </tr>
                   <tr>
-                    <th scope="row"><a href="#">KIM117</a></th>
+                    <th scope="row">KIM117</th>
                     <td class="text-left">Tentukan rumus empiris...</td>
                     <td>Ujian Mandiri UGM 2017</td>
+                    <td>10 November 2020</td>
                     <td><a href="" class="btn btn-info">Detail</a></td>
-                    <td><a href="" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
-                    <td><a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="edit-soal.html" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
+                    <td><button type="button" data-toggle="modal" data-target="#hapus" href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
                   </tr>
                   <tr>
-                    <th scope="row"><a href="#">BIO116</a></th>
+                    <th scope="row">BIO116</th>
                     <td class="text-left">Peleburan antara sel telur dan....</td>
                     <td>SIMAK UI 2018</td>
+                    <td>10 November 2020</td>
                     <td><a href="" class="btn btn-info">Detail</a></td>
-                    <td><a href="" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
-                    <td><a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="edit-soal.html" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
+                    <td><button type="button" data-toggle="modal" data-target="#hapus" href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
                   </tr>
                   <tr>
-                    <th scope="row"><a href="#">KIM115</a></th>
+                    <th scope="row">KIM115</th>
                     <td class="text-left">Tentukan rumus empiris...</td>
                     <td>STAN 2017</td>
+                    <td>10 November 2020</td>
                     <td><a href="" class="btn btn-info">Detail</a></td>
-                    <td><a href="" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
-                    <td><a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="edit-soal.html" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
+                    <td><button type="button" data-toggle="modal" data-target="#hapus" href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
                   </tr>
                   <tr>
-                    <th scope="row"><a href="#">MAT114</a></th>
+                    <th scope="row">MAT114</th>
                     <td class="text-left">Tentukanlah hasil dari Integral...</td>
                     <td>Ujian Mandiri ITB 2016</td>
+                    <td>10 November 2020</td>
                     <td><a href="" class="btn btn-info">Detail</a></td>
-                    <td><a href="" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
-                    <td><a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="edit-soal.html" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
+                    <td><button type="button" data-toggle="modal" data-target="#hapus" href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
                   </tr>
                   <tr>
-                    <th scope="row"><a href="#">KIM113</a></th>
+                    <th scope="row">KIM113</th>
                     <td class="text-left">Tentukan rumus empiris...</td>
                     <td>Ujian Mandiri UGM 2017</td>
+                    <td>9 November 2020</td>
                     <td><a href="" class="btn btn-info">Detail</a></td>
-                    <td><a href="" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
-                    <td><a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="edit-soal.html" class="btn btn-warning text-white"><i class="fas fa-edit"></i></a></td>
+                    <td><button type="button" data-toggle="modal" data-target="#hapus" href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button></td>
                   </tr>
                 </tbody>
               </table>
+              <!-- Modal -->
+              <div class="modal fade" id="hapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Hapus Soal</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      Apakah anda yakin menghapus soal ini?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Iya</button>
+                      <button type="button" class="btn btn-danger">Tidak</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="row justify-content-center m-2">
                 <div class="col-4"> 
                   <nav aria-label="...">

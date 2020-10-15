@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>BAGISOAL</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbarBawah" data-offset="0">
     <a href="#nav" class="btn btn-warning position-fixed d-none d-sm-block" style="z-index: 100; left: 40px; bottom: 40px;"><i class="fas fa-arrow-up"></i></a>
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow" id="nav">
@@ -19,19 +19,58 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand ml-2" href="index.html" style="font-weight: bold;">BAGI<span class="text-warning">SOAL</span></a>
-      <ul class="navbar-nav ml-auto mr-md-3">
-        <li class="nav-item align-self-center">
-          <div class="icon ml-auto mr-2 fa-lg">
-            <a href=""><i class="fas fa-envelope mr-3 text-white" data-toggle="tooltip" title="Surat Masuk"></i></a>
-            <a href=""><i class="fas fa-bell mr-3 text-white" data-toggle="tooltip" title="Notifikasi"></i></a>
+      <ul class="list-inline ml-auto mr-md-3 align-middle mb-0">
+        <li class="dropdown align-self-center list-inline-item">
+          <a style="text-decoration: none;" class="text-white align-middle" href="#" role="button" id="pesan" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-lg mx-2 fas fa-envelope mr-3 text-white" data-toggle="tooltip" title="S"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pesan" style="left: -110px">
+            <a class="dropdown-item" href="#">
+              <span class="d-block"><b>Admin satu</b></span>
+              <span class="d-block5">Gimana masalahnya udah beres?</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span class="d-block"><b>Admin dua</b></span>
+              <span class="d-block">Ada mitra baru nih...</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
           </div>
         </li>
-        <li class="dropdown">
-          <a style="text-decoration: none;" class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="dropdown align-self-center list-inline-item">
+          <a style="text-decoration: none;" class="text-white align-middle" href="#" role="button" id="notif" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-lg mx-2 fas fa-bell mr-3 text-white" data-toggle="tooltip" title=""></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="notif" style="left: -110px">
+            <a class="dropdown-item" href="#">
+              <span><b>Laporan</b></span>
+              <span class="d-block">Soal tidak ada jawaban</span>
+              <span class="fa-xs d-block text-primary">Dari: lailail</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span><b>Laporan</b></span>
+              <span class="d-block">Soal tidak ada jawaban</span>
+              <span class="fa-xs d-block text-primary">Dari: lailail</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item" href="#">
+              <span><b>Laporan</b></span>
+              <span class="d-block">Soal tidak ada jawaban</span>
+              <span class="fa-xs d-block text-primary">Dari: lailail</span>
+              <span class="fa-xs d-block text-primary">10 Nov 2019</span>
+            </a>
+            <a class="dropdown-item text-secondary" href="#">
+              Lihat Lebih...
+            </a>
+          </div>
+        </li>
+        <li class="dropdown list-inline-item">
+          <a style="text-decoration: none;" class="text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img src="res/ks.jpg" width="35" height="35" class="rounded-circle">
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="left: -100px">
-            <a class="dropdown-item" href="#">Profil Saya</a>
+            <a class="dropdown-item" href="profil-admin.html">Profil Saya</a>
             <a class="dropdown-item" href="#">Log out</a>
           </div>
         </li>
@@ -40,31 +79,33 @@
       <!-- CONTENT -->
       <div class="container-fluid">
       	<div class="row">
-          <div class="col-md-2 collapse navbar-collapse d-lg-block min-vh-100 bg-dark border-top border-warning text-center" id="navbarBawah">
-            <nav class="navbar navbar-expand-lg navbar-dark p-0 ">
-              <ul class="navbar-nav w-100 d-block mt-3 text-left ">
-                <li class="nav-item active py-3 px-1">
-                  <a class="nav-link " href="admin.html#nav"><i class="fas fa-home mr-2"></i>Beranda</a>
+          <div class="col-md-2 collapse navbar-collapse d-lg-block min-vh-100 bg-dark border-top border-warning text-center sidebar-outer" id="navbarBawah">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0  position-fixed">
+              <ul class="navbar-nav w-100 d-block mt-3 text-left">
+                <li class="nav-item py-3 px-1">
+                  <a class="nav-link" href="#nav"><i class="fas fa-home mr-2"></i>Beranda</a>
                 </li>
                 <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="admin.html#grafik"><i class="fas fa-chart-line mr-2"></i>Grafik Pengguna</a>
+                  <a class="nav-link" href="#grafik"><i class="fas fa-chart-line mr-2"></i>Grafik Pengguna</a>
                 </li>
                 <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="admin.html#tambahSoal"><i class="fas fa-folder-plus mr-2"></i>Tambah Data</a>
+                  <a class="nav-link" href="#riwayat"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a>
+                </li>
+                <li class="nav-item py-3 px-1 dropdown">
+                  <a class="nav-link" href="#" id="tambah" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-folder-plus mr-2"></i>Tambah Data</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="tambah-soal.html">Tambah Soal</a>
+                    <a class="dropdown-item" href="#">Tambah Kompetisi</a>
+                    <a class="dropdown-item" href="#">Tambah Mitra</a>
+                  </div>
                 </li>
                 <li class="nav-item py-3 px-1">
-                  <a class="nav-link" href="admin.html#riwayat"><i class="fas fa-history mr-2"></i>Riwayat Aktivitas</a>
-                </li>
-                <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="profil-admin.html"><i class="fas fa-user mr-2"></i>Profil</a>
-                </li>
-                <li class="nav-item py-3 px-1">
-                  <a class="nav-link " href="#"><i class="fas fa-cogs mr-2"></i>Pengaturan</a>
+                  <a class="nav-link" href="profil-admin.html"><i class="fas fa-user mr-2"></i>Profil</a>
                 </li>
               </ul>
             </nav>
           </div>
-          <div class="col-md-10" >
+          <div class="col-md-10">
             <div class="container my-3 rounded shadow">
               <div class="row">
                 <nav aria-label="breadcrumb" class="w-100">
@@ -75,39 +116,47 @@
               </div>
             </div>
             <div class="container p-auto p-md-5 mt-3 rounded shadow">
-              <div class="row my-3 d-flex justify-content-between text-white">
-                <div class="col-12 my-2 col-lg-3 bg-info">
-                  <div class="card-body">
+              <div class="row my-3 text-white">
+                <div class="col-12 my-2 col-lg-4">
+                  <div class="card-body bg-info">
                     <i class="fas fa-users d-inline mr-2"></i>
                     <h5 class="card-title d-inline">Jumlah Pengguna</h5>
                     <h6 class="display-4">2200</h6>
-                    <a href="daftarpengguna.html" class="text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></a>
-                    
+                    <a href="daftarpengguna.html" class="text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></a>    
                   </div>
                 </div>
-                <div class="col-12 my-2 col-lg-3 bg-success">
-                  <div class="card-body">
+                <div class="col-12 my-2 col-lg-4">
+                  <div class="card-body bg-success">
                     <i class="fas fa-folder d-inline mr-2"></i>
                     <h5 class="card-title d-inline">Jumlah Soal</h5>
                     <h6 class="display-4">700</h6>
                     <a href="daftarsoal.html" class="text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></a>
                   </div>
                 </div>
-                <div class="col-12 my-2 col-lg-3 bg-danger">
-                  <div class="card-body">
+                <div class="col-12 my-2 col-lg-4">
+                  <div class="card-body bg-warning">
+                    <i class="fas fa-trophy d-inline mr-2"></i>
+                    <h5 class="card-title d-inline">Jumlah Kompetisi</h5>
+                    <h6 class="display-4">2</h6>
+                    <a href="daftarkompetisi.html" class="text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-3 text-white justify-content-around">
+                <div class="col-12 my-2 col-lg-4">
+                  <div class="card-body bg-danger">
                     <i class="fas fa-handshake d-inline mr-2"></i>
                     <h5 class="card-title d-inline">Jumlah Mitra</h5>
                     <h6 class="display-4">7</h6>
                     <a href="daftarmitra.html" class="text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></a>
                   </div>
                 </div>
-                <div class="col-12 my-2 col-lg-3 bg-secondary">
-                  <div class="card-body">
+                <div class="col-12 my-2 col-lg-4">
+                  <div class="card-body bg-secondary">
                     <i class="fas fa-users-cog d-inline mr-2"></i>
                     <h5 class="card-title d-inline">Jumlah Admin</h5>
                     <h6 class="display-4">3</h6>
                     <a href="daftaradmin.html" class="text-white">Lihat Detail<i class="fas fa-angle-double-right ml-2"></i></a>
-                    
                   </div>
                 </div>
               </div>
@@ -129,7 +178,7 @@
                 </div>
               </div>
             </div>
-            <div class="container p-5 my-3 rounded shadow" id="tambahSoal">
+            <!-- <div class="container p-5 my-3 rounded shadow" id="tambahSoal">
               <div class="row">
                 <div class="col-12">
                   <h2>Tambah Data</h2>
@@ -271,7 +320,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="container p-5 my-3 rounded shadow" id="riwayat">
               <div class="row">
                 <div class="col-12">
@@ -290,6 +339,36 @@
                       </tr>
                     </thead>
                     <tbody>
+                      <tr>
+                          <td>Tambah Soal</td>
+                          <td>Selasa, 30 Oktober 2019</td>
+                          <td>Admin Satu</td>
+                          <td><a href="#" class="btn btn-info">DETAIL</a></td>
+                      </tr>
+                      <tr>
+                          <td>Hapus Soal</td>
+                          <td>Senin, 29 Oktober 2019</td>
+                          <td>Admin Satu</td>
+                          <td><a href="#" class="btn btn-info">DETAIL</a></td>
+                      </tr>
+                      <tr>
+                          <td>Hapus Soal</td>
+                          <td>Senin, 29 Oktober 2019</td>
+                          <td>Admin Satu</td>
+                          <td><a href="#" class="btn btn-info">DETAIL</a></td>
+                      </tr>
+                      <tr>
+                          <td>Edit Soal</td>
+                          <td>Senin, 29 Oktober 2019</td>
+                          <td>Admin Dua</td>
+                          <td><a href="#" class="btn btn-info">DETAIL</a></td>
+                      </tr>
+                      <tr>
+                          <td>Edit Soal</td>
+                          <td>Senin, 29 Oktober 2019</td>
+                          <td>Admin Tiga</td>
+                          <td><a href="#" class="btn btn-info">DETAIL</a></td>
+                      </tr>
                       <tr>
                           <td>Tambah Soal</td>
                           <td>Selasa, 30 Oktober 2019</td>
