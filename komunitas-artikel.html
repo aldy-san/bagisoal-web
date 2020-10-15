@@ -61,26 +61,27 @@
     </nav>
       <!-- CONTENT -->
       <div class="container p-3 my-3 rounded bg-white">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-outline-primary">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked>Forum
-          </label>
-          <label class="btn btn-outline-primary active">
-            <input type="radio" name="options" id="option2" autocomplete="off">Artikel
-          </label>
-          <div>
-            <button type="button" class="btn btn-outline-info pull-right">Tulis</button>
+        <div class="row ">
+          <div class="col-9">
+            <div class="row justify-content-between">
+              <div>
+                <a href="komunitas-forum.html" class="btn btn-primary">Forum</a>
+                <a href="komunitas-artikel.html" class="btn btn-primary active">Artikel</a>
+              </div>
+              <button type="button" class="btn btn-outline-info">Tulis</button>
+            </div>
           </div>
-        </div>
+        </div> 
 
         <div class="row">
           <div class="col-9 shadow">
             <div class="container">
-
+                 
                 <div class="row mb-5 mt-2">
-                  <div class="col-4">
-                    <i class="fas fa-user align-self-center mr-3"></i>
-                    <p>Penulis</p>
+                  <div class="col-4 d-flex">
+                    <div class="align-self-center">
+                      <i class="fas fa-user mr-3">Penulis</i>
+                    </div>
                   </div>
                   <div class="col-8">
                     <h6>Judul</h6>
