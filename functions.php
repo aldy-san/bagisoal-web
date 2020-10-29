@@ -1,12 +1,12 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "dummy");
 
-function query($query){
+function show($query){
 	global $conn;
-	$result = mysqli_connect($conn, $query);
+	$result = mysqli_query($conn, $query);
 	$rows = [];
 	while($row = mysqli_fetch_assoc($result)){
-		$rows = $row;
+		$rows[] = $row;
 	}
 	return $rows;
 }
