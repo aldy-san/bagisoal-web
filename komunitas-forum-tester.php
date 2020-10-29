@@ -1,6 +1,6 @@
 <?php  
 require 'functions.php';
-$show = show("SELECT * FROM catatan");
+$show = showcatatan("SELECT * FROM pertanyaan");
 // $show menampung array hasil query
 ?>
 
@@ -106,35 +106,6 @@ $show = show("SELECT * FROM catatan");
                   </div>
                 </div>
               </div>
-              <div class="row shadow-sm py-3">
-                <div class="col-1 text-cnsyahrial666">
-                  <p class="my-1">0 votes</p>
-                  <p class="my-1">0 jawaban</p>
-                  <p class="my-1">4 Melihat</p>
-                </div>
-                <div class="col-11  p-2">
-                  <h6 class="m-0 d-flex align-items-center">
-                    <img src="res/fc.jpg" width="26" height="26" class="rounded-circle mr-1">
-                    <a href="" style="text-decoration: none;" class="text-dark"><b>nsyahrial666</b></a>
-                  </h6>
-                  <div class="pt-2">
-                    <a class="h5" style="text-decoration: none; cursor:" href="#">Apakah lorem ipsum nganu?</a>
-                    <p class="my-1">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo....
-                    </p>
-                  </div>
-                  <div class="row">
-                    <div class="col-12">
-                      <a href="#" class="badge badge-info">#Tags</a>
-                      <a href="#" class="badge badge-info">#Tags</a>
-                    </div>
-                    <div class="col-12">
-                    </div>
-                  </div>
-                </div>
-              </div>
               <?php foreach($show as $row) :?>
               <div class="row shadow-sm py-3">
                 <div class="col-1 text-cnsyahrial666">
@@ -148,14 +119,14 @@ $show = show("SELECT * FROM catatan");
                     <a href="" style="text-decoration: none;" class="text-dark"><b>nsyahrial666</b></a>
                   </h6>
                   <div class="pt-2">
-                    <a class="h5" style="text-decoration: none; cursor:" href="#"><?php echo $row["judul"]; ?></a>
+                    <a class="h5" style="text-decoration: none; cursor:" href="#"><?php echo $row["judul_pertanyaan"]; ?></a>
                     <p class="my-1">
-                      <?php echo $row["deskripsi"]; ?>
+                      <?php echo $row["isi_pertanyaan"]; ?>
                     </p>
                   </div>
                   <div class="row">
                     <div class="col-12">
-                      <a href="#" class="badge badge-info"><?php echo $row["tags"]; ?></a>
+                      <a href="#" class="badge badge-info"><?php echo $row["tags_pertanyaan"]; ?></a>
                     </div>
                     <div class="col-12">
                     </div>
@@ -271,7 +242,7 @@ $show = show("SELECT * FROM catatan");
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
   </body>
 </html>
