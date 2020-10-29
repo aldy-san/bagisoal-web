@@ -39,8 +39,13 @@ function tambah($data){
 	global $conn;
 	$judul = htmlspecialchars($data["judul"]);
 	$deskripsi = htmlspecialchars($data["deskripsi"]);
-	$gambar = htmlspecialchars($data["gambar"]);
 	$tags = htmlspecialchars($data["tags"]);
+
+	//upload gambar
+	$gambar = upload();
+	if(!$gambar){
+		return false;
+	}
 
   	$query = "INSERT INTO catatan VALUES
             ('$judul', '$deskripsi', '$gambar', '$tags')
@@ -50,4 +55,45 @@ function tambah($data){
 
   	return mysqli_affected_rows($conn);
 }
+
+function upload(){
+
+	$namaFile = $_FILES["gambar"]["name"];
+	$ukuranFile = $_FILES["gambar"]["size"];
+	$error = $_FILES["gambar"]["error"];
+	$tempName = $_FILES["gambar"]["tmp_name"];
+
+	if($error == 4){
+		echo "<script>
+				alert('pilih gambar !')
+			  </script>";
+		return false;
+	}
+
+	//cek apakah yang diupload adalah gambar
+	$ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
+	$ekstensiGambar = explode('.', $namaFile);
+	$ekstensiGambar = strtolower(end($ekstensiGambar));
+	if(!in_array($ekstensiGambar, $ekstensiGambarValid)){
+		echo "<script>
+				alert('yang anda upload bukan gambar !')
+			  </script>";
+		return false;
+	}
+	//cek ukuran gambar
+	if($ukuranFile > 3000000){
+		echo "<script>
+				alert('ukuran gambar terlalu besar !')
+			  </script>";
+		return false;
+	}
+	//gambar siap di upload, tapi file yang di upload nanti harus
+	//satu folder dengan htdocs
+	$namaFileBaru = uniqid(); // untuk handle nama file sama dari user yang berbeda
+	$namaFileBaru .= '.';
+	$namaFileBaru .= $ekstensiGambar;
+	move_uploaded_file($tempName, 'lel/' . $namaFileBaru);
+
+	return $namaFileBaru;
+}	
 ?>

@@ -86,7 +86,7 @@ if (isset($_POST["submit"])) {
         <div class="row my-2 px-5">
           <div class="col-12">
             <div class="container text-left">
-              <form method="post" action="">
+              <form method="post" enctype="multipart/form-data" action="">
                 <div class="form-group">
                   <label for="title"><b class="h4">Judul Pertanyaan</b></label>
                   <input class="form-control" type="text" name="judul" id="title" placeholder="Judul Pertanyaan">
